@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="games.css"/>
+        <style>
+            body {
+                font-family: monospace;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Minecraft</h1>
+        <div class="header_container">
+            <div class="header_info">
+                <div class="header_info_top">
+                    <div class="game_box_art">
+                        <img src="../img/minecraft_preview.jpg"/>
+                    </div>
+                    <div class="game_brief_description">
+                        <h1>Майнкрафт - это игра.</h1>
+                        <h3>Год выхода: 2009</h3>
+                        <h3>Разработчик: Mojang</h3>
+                        <div class="pay_button">
+                            <img src="../img/cart_icon.png"/>
+                            <h3>Оплатить - $99.99</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="header_info_bottom">
+                    <div class="tabs_group">
+                        <div class="tab_active" id="firstActiveTab" onclick="clickTab(event)" data-tab-id="tab_description">Описание</div>
+                        <div onclick="clickTab(event)" data-tab-id="tab_system_requirements">Системные требования</div>
+                    </div>
+                    <div id="tab_description">
+                        <p>Minecraft — это знаменитая песочница, где игроки могут исследовать бесконечные процедурно-генерируемые миры, добывать ресурсы, создавать инструменты и строить практически всё, что только можно вообразить. От простых хижин до величественных замков, от подземных лабиринтов до летающих островов — пределов для творчества не существует.</p>
+                        <p>Игра предлагает несколько режимов: выживание, где нужно добывать ресурсы и защищаться от монстров; творческий режим с неограниченными ресурсами; хардкорный режим для настоящих испытаний; и многопользовательский режим для совместной игры с друзьями.</p>
+                        <p>С момента своего выхода в 2011 году Minecraft стал культурным феноменом, проданным более чем в 238 миллионов копий по всему миру, став самой продаваемой видеоигрой всех времён.</p>
+                    </div>
+                    <div id="tab_system_requirements" class="invisible">
+                        <p>Операционная система: Minix/Windows 12</p>
+                        <p>Процессор: Motorola 6800/Intel Core i11 21900K</p>
+                        <p>Видеокарта: 3D ускоритель Voodoo</p>
+                        <p>Оперативная память: не менее 2 килобайт</p>
+                        <p>Место: 20 йобибайтов</p>
+                        <p>Альтернативно: компьютер Z4</p>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="gallery_current">
+                    <img id="mainImage" src="../img/minecraft.avif"/>
+                </div>
+                <div class="gallery_list">
+                    <img id="firstImage" class="active" onclick="clickImage(event)" src="../img/minecraft.avif"/>
+                    <img onclick="clickImage(event)" src="../img/minecraft2.avif"/>
+                    <img onclick="clickImage(event)" src="../img/minecraft3.avif"/>
+                    <img onclick="clickImage(event)" src="../img/minecraft4.jpg"/>
+                    <img onclick="clickImage(event)" src="../img/minecraft5.webp"/>
+                </div>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <script src="../js/gallery.js"></script>
+        <script src="../js/tabs.js"></script>
+    </footer>
+</html>

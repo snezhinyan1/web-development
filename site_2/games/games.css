@@ -1,0 +1,157 @@
+body {
+    background-color: rgb(20, 20, 20);
+    color: rgb(244, 237, 250);
+    font-family: Cochin;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+}
+
+.gallery {
+    width: 700px;
+    height: 400px;
+}
+
+.gallery_current {
+    width: 100%;
+    height: 80%;
+    background-color: rgb(35,35,35);
+}
+
+.gallery_current > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.gallery_list {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 5px;
+    overflow-x: scroll;
+}
+
+.gallery_list > img {
+    height: 100%;
+    width: 125px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.active {
+    border: 2px solid white;
+}
+
+.header_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.header_info {
+    width: 60%;
+    height: 400px;
+    background-color: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.header_info_top {
+    width: 100%;
+    height: 40%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 20px;
+}
+
+.header_info_bottom {
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+}
+
+.game_box_art {
+    width: 50%;
+    height: 100%;
+}
+
+.game_box_art > img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game_brief_description {
+    position: relative;
+}
+
+.game_brief_description > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.pay_button {
+    margin-top: 10px;
+    width: 70%;
+    background-color: green;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    right: 0;
+}
+
+.pay_button > h3 {
+    margin-block: 0;
+}
+
+.pay_button > img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.header_info_bottom {
+    font-size: 12px;
+    padding: 8px;
+    line-height: 1;
+}
+
+.invisible {
+    display: none;
+}
+
+.tabs_group {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+}
+
+.tabs_group > div {
+    background-color: rgba(0,0,0,0.5);
+    padding-inline: 10px;
+    padding-block: 5px;
+    font-size: 14px;
+    cursor: grab;
+}
+
+.tabs_group > div:hover{
+    color: gray;
+}
+
+.tab_active {
+    background-color: red !important;
+}

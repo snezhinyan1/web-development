@@ -1,0 +1,215 @@
+html {
+    background-color: rgb(20,20,20);
+    color: white;
+    font-family: monospace;
+}
+
+body {
+    margin: 0;
+}
+
+.test_container {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#question_container {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#answers_container {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    gap: 0.8rem;
+}
+
+.answer {
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 2rem;
+    padding-left: 5rem;
+    padding-block: 0.4rem;
+    border-radius: 25px;
+}
+
+@keyframes answer_animation {
+    0% {
+        color: white;
+    }
+
+    50% {
+        color: orange;
+    }
+
+    100% {
+        color: white;
+    }
+}
+
+.answer:hover {
+    animation: answer_animation 2s infinite;
+}
+
+.buttons_container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.skip_button {
+    background-color: blueviolet;
+    padding-inline: 0.4rem;
+    padding-block: 0.2rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    border: white 2px solid;
+    border-radius: 5px;
+    cursor: default;
+    user-select: none;
+}
+
+@keyframes next_button_animation {
+    0% {
+        background-color: orange;
+    }
+
+    50% {
+        background-color: orangered;
+    }
+
+    100% {
+        background-color: orange;
+    }
+}
+
+.next_button:hover {
+    animation: next_button_animation 2s infinite;
+}
+
+.next_button {
+    background-color: orange;
+    padding-inline: 0.4rem;
+    padding-block: 0.2rem;
+    font-size: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    border: white 2px solid;
+    border-radius: 5px;
+    cursor: default;
+    user-select: none;
+}
+
+@keyframes skip_button_animation {
+    0% {
+        background-color: blueviolet;
+    }
+
+    50% {
+        background-color: blue;
+    }
+
+    100% {
+        background-color: blueviolet;
+    }
+}
+
+.skip_button:hover {
+    animation: skip_button_animation 2s infinite;
+}
+
+.correct {
+    animation: correct_animation 1s 1;
+    animation-fill-mode: forwards;
+}
+
+.wrong {
+    animation: wrong_animation 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes wrong_animation {
+    from {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    to {
+        background-color: red;
+    }
+}
+
+@keyframes correct_animation {
+    from {
+        background-color: rgba(255,255,255,0.1);
+    }
+
+    to {
+        background-color: green;
+    }
+}
+
+.neutral {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+#valor {
+    font-size: 2rem;
+    width: 5rem;
+    height: 2rem;
+    font-weight: 600;
+    padding-inline: 0.8rem;
+    padding-block: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border: solid red 2px;
+    border-radius: 10px;
+}
+
+#endScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    margin: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 10;
+}
+
+.tryAgain {
+    font-size: 1.4rem;
+    width: fit-content;
+    height: 1.4rem;
+    padding-inline: 0.8rem;
+    padding-block: 0.4rem;
+    border: solid lightgray 2px;
+    border-radius: 10px;
+    cursor: default;
+    user-select: none;
+}
+
+.tryAgain:hover {
+    color: orange;
+}
